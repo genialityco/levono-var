@@ -2,7 +2,7 @@ import { useMemo, useRef, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import problems from "../data/problems.json";
-import { IMAGES, ICONS } from "../constants/assets";
+import { IMAGES, ICONS, VIDEOS } from "../constants/assets";
 import FooterSponsors from "../components/FooterSponsors";
 
 import "../styles/detalleproblema.css";
@@ -34,10 +34,18 @@ export default function DetalleProblema() {
   };
 
   return (
-    <section
-      className="detail"
-      style={{ "--bg-url": `url(${IMAGES.bg3})` }}
-    >
+    <section className="detail">
+
+      <video
+        className="home__bgVideo"
+        src={VIDEOS.bg3video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+         poster={IMAGES.bg2}
+      />
       {/* Fondo */}
       <div className="detail__bg" />
       <div className="detail__overlay" />

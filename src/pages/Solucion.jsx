@@ -2,7 +2,7 @@ import { useMemo, useRef, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import problems from "../data/problems.json";
-import { IMAGES } from "../constants/assets";
+import { IMAGES, VIDEOS } from "../constants/assets";
 import FooterSponsors from "../components/FooterSponsors";
 import HeaderLogo from "../components/HeaderLogo";
 
@@ -39,8 +39,19 @@ export default function Solucion() {
     <section
       
       className="solution"
-      style={{ "--bg-url": `url(${IMAGES.fondoEncuesta})` }}  // <- fondo azul
+      
     >
+        <video
+          className="home__bgVideo"
+          src={VIDEOS.bg4video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={IMAGES.bg2}
+        />
+
       <HeaderLogo />
       <div className="solution__bg" />
       <div className="solution__overlay" />

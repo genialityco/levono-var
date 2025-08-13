@@ -27,7 +27,7 @@ export default function Analizando() {
 
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { IMAGES } from "../constants/assets";
+import { IMAGES, VIDEOS } from "../constants/assets";
 import FooterSponsors from "../components/FooterSponsors";
 import "../styles/analizando.css";
 
@@ -46,10 +46,17 @@ export default function Analizando() {
   }, [navigate, target]);
 
   return (
-    <section
-      className="loadingScreen"
-      style={{ "--bg-url": `url(${IMAGES.bg2})` }}
-    >
+    <section className="loadingScreen"    >
+      <video
+              className="home__bgVideo"
+              src={VIDEOS.bg2video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              poster={IMAGES.bg2}
+            />
       <div className="loadingScreen__bg" />
       <div className="loadingScreen__overlay" />
 

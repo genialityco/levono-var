@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import HeaderLogo from "../components/HeaderLogo";
 import FooterSponsors from "../components/FooterSponsors";
-import { IMAGES } from "../constants/assets";
+import { IMAGES, VIDEOS } from "../constants/assets";
 import "../styles/revisar.css";
 
 export default function Revisar() {
@@ -11,8 +11,17 @@ export default function Revisar() {
   return (
     <section
       className="revisar"
-      style={{ "--bg-url": `url(${IMAGES.fondoEncuesta})` }}
     >
+      <video
+                className="home__bgVideo"
+                src={VIDEOS.bg4video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                poster={IMAGES.bg2}
+              />
       {/* Fondo */}
       <div className="revisar__bg" />
       <div className="revisar__overlay" />
@@ -31,12 +40,14 @@ export default function Revisar() {
           />
 
           {/* CTA central (botón morado/rojo que va dentro del marco) */}
-          <button
-            className="revisar__cta"
-            onClick={() => navigate("/seleccion")}
-          >
-            ¡Toca aquí para volver al Lenovo PlayCheck Desk!
+          <div className="contenedor_boton">
+            <button
+              className="revisar__cta"
+              onClick={() => navigate("/seleccion")}
+            >
+              ¡Toca aquí para volver al Lenovo PlayCheck Desk!
           </button>
+          </div>
         </div>
       </main>
 

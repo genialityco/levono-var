@@ -25,7 +25,7 @@ export default function Gracias() {
 import { useNavigate } from "react-router-dom";
 import HeaderLogo from "../components/HeaderLogo";
 import FooterSponsors from "../components/FooterSponsors";
-import { IMAGES } from "../constants/assets";
+import { IMAGES, VIDEOS } from "../constants/assets";
 import "../styles/gracias.css";
 
 export default function Gracias() {
@@ -40,8 +40,20 @@ export default function Gracias() {
   return (
     <section
       className="thanks"
-      style={{ "--bg-url": `url(${IMAGES.fondoGracias})` }}
+      
     >
+
+      <video
+                className="home__bgVideo"
+                src={VIDEOS.bg5video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                poster={IMAGES.bg2}
+              />
+      
       {/* Fondo */}
       <div className="thanks__bg" />
       <div className="thanks__overlay" />

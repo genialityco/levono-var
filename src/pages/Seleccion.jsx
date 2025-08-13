@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import problems from "../data/problems.json";
-import { ICONS, POPUPS, IMAGES } from "../constants/assets";
+import { ICONS, POPUPS, IMAGES, VIDEOS } from "../constants/assets";
 
 import HeaderLogo from "../components/HeaderLogo";
 import FooterSponsors from "../components/FooterSponsors";
@@ -72,7 +72,17 @@ export default function Seleccion() {
   };
 
   return (
-    <section className="screen2" style={{ "--bg-url": `url(${IMAGES.bg2})` }}>
+    <section className="screen2" >
+      <video
+              className="home__bgVideo"
+              src={VIDEOS.bg2video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              poster={IMAGES.bg2}
+            />
       {/* Fondo */}
       <div className="screen2__bg" />
       <div className="screen2__overlay" />

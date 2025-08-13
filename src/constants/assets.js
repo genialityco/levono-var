@@ -9,6 +9,11 @@ import logosfooter from '../assets/images/logo/LOGOS_FOOTER.png'
 import btnComenzar from '../assets/images/BOTON_COMENZAR.png'
 import texthome from '../assets/images/text-home.png'
 import bg2 from '../assets/images/backgrounds/FONDOS-02.png'
+import homebg from '../assets/images/animacion/FONDOS_LENOVO_01.mp4'
+import bg2video from '../assets/images/animacion/FONDOS_LENOVO_02.mp4'
+import bg3video from '../assets/images/animacion/FONDOS_LENOVO_03.mp4'
+import bg4video from '../assets/images/animacion/FONDOS_LENOVO_04.mp4'
+import bg5video from '../assets/images/animacion/FONDOS_LENOVO_05.mp4'
 import B01 from '../assets/images/Botones/BOTONES_MENU-01.png'
 import B02 from '../assets/images/Botones/BOTONES_MENU-05.png'
 import B03 from '../assets/images/Botones/BOTONES_MENU-03.png'
@@ -43,12 +48,19 @@ import marcoRevisar from '../assets/images/MARCO_REVISAR_DE_NUEVO.svg';
 // Si más adelante agregas íconos u otros fondos, los añades aquí.
 export const ICONS = { B01, B02, B03, B04, B05, B06, B07, B08 };
 export const POPUPS = { P01, P02, P03, P04, P05, P06, P07, P08  };
+export const VIDEOS = {
+  homebg,
+  bg2video,
+  bg3video,
+  bg4video,
+  bg5video
+};
 export const IMAGES = {
   logoPlayCheck,
   logosfooter,
-  bgHome,
   btnComenzar,
   texthome,
+  bgHome,
   bg2,
   canchaMenu,
   texto_problemas,

@@ -79,3 +79,14 @@
     border-radius: 8px;
   }
 }
+
+/* VIDEO de fondo */
+.home__bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                  /* que cubra completamente */
+  z-index: 0;                         /* por detrás de overlays y contenido */
+  filter: saturate(1.05) contrast(1.05);
+}

@@ -1,6 +1,6 @@
 import { Button, Container, Stack, Title, Text, Center } from '@mantine/core'
 import { useNavigate } from 'react-router-dom'
-import { IMAGES } from '../constants/assets';   // ⬅️ IMPORTANTE
+import { IMAGES, VIDEOS  } from '../constants/assets';   // ⬅️ IMPORTANTE
 import '../styles/home.css'
 
 export default function Home() {
@@ -8,9 +8,18 @@ export default function Home() {
 
 
     return (
-        <section
-      className="home" style={{ '--bg-url': `url(${IMAGES.bgHome})` }}
-    >
+      <section className="home" >
+      <video
+        className="home__bgVideo"
+        src={VIDEOS.homebg}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster={IMAGES.bgHome}
+      />
+
       <div className="home__bg" />
       <div className="home__overlay" />
       <div className="home__vignette" />

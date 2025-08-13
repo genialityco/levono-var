@@ -28,7 +28,7 @@ export default function Encuesta() {
 import { useNavigate, useParams } from "react-router-dom";
 import HeaderLogo from "../components/HeaderLogo";
 import FooterSponsors from "../components/FooterSponsors";
-import { IMAGES } from "../constants/assets";
+import { IMAGES, VIDEOS } from "../constants/assets";
 import "../styles/Encuesta.css";
 
 export default function Encuesta() {
@@ -44,6 +44,16 @@ export default function Encuesta() {
       className="encuesta-container"
       style={{ backgroundImage: `url(${IMAGES.fondoEncuesta})` }}
     >
+      <video
+        className="home__bgVideo"
+        src={VIDEOS.bg4video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster={IMAGES.bg2}
+      />
       <HeaderLogo />
 
       <main className="encuesta-content">

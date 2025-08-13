@@ -56,11 +56,12 @@
 
 /* CTA (botón dentro del marco) */
 .revisar__cta{
+  width: 38%;
   position: absolute;
   left: 50%;
   top: var(--cta-top);
   transform: translate(-50%, -50%);
-  padding: clamp(12px, 1.8vw, 20px) clamp(6px, 0.1vw, 4px);
+  padding: clamp(12px, 1.8vw, 0px) clamp(6px, 0.1vw, 14px);
   font-size: clamp(14px, 3.4vw, 35px);
   font-weight: 900;
   line-height: 1.2;
@@ -70,7 +71,11 @@
   background: linear-gradient(90deg, #B30000 0%, #9B0050 50%);
   box-shadow: 0 10px 24px rgba(0,0,0,.35);
 }
+
 .revisar__cta:active{
   transform: translate(-50%, -50%) scale(.98);
 }
   
+
+
+
