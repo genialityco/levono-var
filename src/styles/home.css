@@ -1,0 +1,103 @@
+/* ===== Base ===== */
+.home {
+  position: relative;
+  min-height: 100vh;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.home__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Gradiente + oscurecimiento como la pieza 
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(226,35,26,0.88) 0%,
+    rgba(77,16,71,0.92) 48%,
+    rgba(122,15,58,0.88) 100%
+  );
+}*/
+
+.home__vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(80% 60% at 50% 72%, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.18) 55%, rgba(0,0,0,0.04) 100%);
+}
+
+/* ===== Layout contenido ===== */
+.home__content {
+  position: relative;
+  min-height: inherit;
+  display: grid;
+  place-items: center;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.home__inner {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+/* Logo central grande */
+.home__logo {
+  width: 80%;       /* antes 720 */
+  display: block;
+  margin-inline: auto;
+  margin-top: -20%;
+}
+
+/* Bloque de copy debajo del logo */
+.home__copy {
+  margin-top: clamp(10px, 1.6vh, 16px);
+}
+
+/* Botón píldora: borde blanco y fondo translúcido */
+.home__cta-img {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: clamp(18px, 2.6vh, 24px);
+  cursor: pointer;
+}
+.home__cta-img img {
+  width: min(260px, 45vw);
+  display: block;
+  filter: drop-shadow(0 8px 30px rgba(0,0,0,0.25));
+}
+
+/* Sponsors al borde inferior con separadores */
+.home__sponsors {
+  position: absolute;
+  left: 0; right: 0; bottom: clamp(16px, 3vh, 28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 2.8vw, 32px);
+  opacity: 0.95;
+}
+
+.home__sponsors img {
+  height: 100px; /* ⬅️ más grandes */
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+}
+
+
+
+.home__texto{
+  width: min(900px, 90vw);
+  display: block;
+  margin-top: -5% !important;
+  margin: clamp(6px, 1vh, 100px) auto 0; /* muy pegado al logo */
+}

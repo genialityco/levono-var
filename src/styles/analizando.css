@@ -1,0 +1,100 @@
+/* Pantalla base (misma lógica de fondo que selección) */
+.loadingScreen {
+  position: relative;
+  min-height: 100svh;
+  color: #fff;
+  overflow: hidden;
+}
+.loadingScreen__bg,
+.loadingScreen__overlay {
+  position: absolute;
+  inset: 0;
+}
+.loadingScreen__bg {
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+}
+.loadingScreen__overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(226,35,26,0) 0%,
+    rgba(77,16,71,0) 48%,
+    rgba(122,15,58,0) 100%
+  );
+}
+
+/* Contenido centrado */
+.loadingScreen__content {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+/* Escenario de la cancha */
+.loadingStage {
+  position: relative;
+  width: min(900px, 92vw);
+  margin-inline: auto;
+  margin-bottom: 10%;
+}
+.loadingField {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,.35));
+  pointer-events: none;
+}
+
+/* Spinner centrado sobre la cancha */
+.loadingSpinner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+/* Anillo animado (simula el círculo rojo del arte) */
+.loadingRing {
+  --size: clamp(120px, 18vw, 220px);
+  --thick: clamp(10px, 1.6vw, 18px);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, white 0 52%, transparent 53% 100%),
+    conic-gradient(from 0turn, #ff402c 0 25%, rgba(255,64,44,0) 26% 100%);
+  mask:
+    radial-gradient(circle at center,
+      transparent 0 calc(50% - var(--thick)),
+      #000 calc(50% - var(--thick)) 100%);
+  animation: spin 1.4s linear infinite;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
+  z-index: 10;
+}
+
+/* Texto del centro */
+.loadingLabel {
+  position: absolute;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: clamp(16px, 2vw, 24px);
+  width: clamp(120px, 18vw, 240px);
+  aspect-ratio: 1/1;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #e1211b; /* se ve bien sobre el centro blanco */
+  background: white; /* círculo blanco sólido */
+}
+
+/* Animación del anillo */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

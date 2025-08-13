@@ -1,0 +1,138 @@
+/* ===== Pantalla base ===== */
+.detail{
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  color: #fff;
+
+  /* Perillas (ajústalas sin tocar el resto) */
+  --stage-w: min(950px, 92vw);   /* ancho total del marco */
+  --frame-w: 100%;                /* marco ocupa todo el stage */
+  --video-w: min(812px, 86vw);    /* ancho del video dentro del marco */
+  --video-top:54%;               /* % desde arriba del marco hasta el centro del video */
+  
+}
+
+/* Fondo */
+.detail__bg,.detail__overlay{ position: absolute; inset: 0; }
+.detail__bg{
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+}
+.detail__overlay{
+  background: linear-gradient(90deg,
+    rgba(226,35,26,0) 0%,
+    rgba(77,16,71,0) 48%,
+    rgba(122,15,58,0) 100%);
+}
+
+/* Back */
+.detail__back{
+  position: absolute;
+  top: clamp(14px, 10vh, 88px);
+  left: clamp(12px, 6vw, 106px);
+  z-index: 3;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: clamp(18px, 2.9vw, 35px);
+  cursor: pointer;
+}
+
+/* Escenario */
+.detail__stage{
+  position: relative;
+  z-index: 1;
+  width: var(--stage-w);
+  margin: clamp(70px, 11vh, 120px) auto 0;
+}
+
+/* Marco */
+.detail__frame{
+  width: var(--frame-w);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.35));
+  pointer-events: none;            /* no intercepta clics del video */
+  user-select: none;
+}
+
+/* ===== knobs del banner rojo ===== */
+.detail{
+  /* ancho visible del rectángulo rojo respecto al marco */
+  --banner-w: 45%;
+  /* posición vertical del banner (sube/baja el grupo icono+texto) */
+  --banner-top: 5.5%;
+  /* separación icono / texto y aire lateral interno (no es fondo nuevo) */
+  --banner-gap: 12px;
+  --banner-pad-x: 14px;
+}
+
+/* Contenedor del título encima de la franja roja del marco */
+.detail__title{
+  position: absolute;
+  top: var(--banner-top);
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--banner-w);       /* << limita el ancho del bloque */
+  max-width: 800px;             /* opcional: tope absoluto */
+  display: flex;
+  align-items: center;
+  gap: var(--banner-gap);
+  padding: 0 var(--banner-pad-x);
+  box-sizing: border-box;
+
+  pointer-events: none;         /* no estorba clics del video */
+}
+
+/* Icono fijo, que no se encoja */
+.detail__titleIcon{
+  width: clamp(22px, 3.6vw, 60px);
+  height: auto;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.3));
+}
+
+/* Texto: hasta 2 líneas, luego ellipsis */
+.detail__titleText{
+  flex: 1 1 auto;               /* ocupa el resto del ancho */
+  font-weight: 800;
+  font-size: clamp(16px, 1.9vw, 24px);
+  line-height: 1.15;
+  letter-spacing: .2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,.35);
+
+  /* multi-línea con corte a 2 líneas */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;        /* máximo 2 renglones */
+  -webkit-box-orient: vertical;
+  white-space: normal;          /* permite saltos de línea */
+  text-overflow: ellipsis;      /* agrega … si se pasa */
+}
+
+
+/* Video (encajado dentro del rectángulo del marco) */
+.detail__video {
+  position: absolute;
+  left: 50%;
+  top: var(--video-top);
+  transform: translate(-50%, -50%);
+  width: var(--video-w);
+  max-height: 450px; /* 🔹 Ajusta este valor para que baje la altura */
+  object-fit: contain; /* Mantiene proporción original */
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  background: #000;
+  z-index: 2;
+}
+
+/* Responsivo fino */
+@media (max-width: 900px){
+  .detail{
+    --video-w: 82vw;
+    --video-top: 41%;
+  }
+}

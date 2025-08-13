@@ -1,0 +1,39 @@
+/* src/styles/theme.css */
+:root {
+  /* Colores Lenovo */
+  --lenovo-red: #E2231A;
+  --ink-900: #1a1a1a;
+  --ink-700: #333333;
+
+  /*Fuentes Globales*/
+  --font-heading: 'Gotham', 'Segoe UI Local', 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-body: 'Segoe UI Local', 'Segoe UI', Roboto, Arial, sans-serif;  
+
+  /* Texto y overlays */
+  --white: #ffffff;
+  --overlay-grad: linear-gradient(
+    90deg,
+    rgba(226, 35, 26, 0.75) 0%,
+    rgba(77, 16, 71, 0.80) 45%,
+    rgba(122, 15, 58, 0.75) 100%
+  );
+
+  /* Espaciados base */
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Dimensiones */
+  --header-height: 56px; /* ajusta si tu header cambia */
+  --footer-height: 64px;
+}
+
+/* Aplica a todo */
+html, body {
+  font-family: var(--font-body);
+}
+
+/* Titulares por defecto (si usas <h1>, <h2> o clases) */
+h1, h2, h3, .heading {
+  font-family: var(--font-heading);
+}

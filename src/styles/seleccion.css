@@ -1,0 +1,165 @@
+/* ===== Pantalla base ===== */
+.screen2{
+  position: relative;
+  min-height: 100svh;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Fondo */
+.screen2__bg,
+.screen2__overlay{
+  position: absolute;
+  inset: 0;
+}
+.screen2__bg{
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+}
+.screen2__overlay{
+  background: linear-gradient(90deg,
+    rgba(226,35,26,0) 0%,
+    rgba(77,16,71,0) 48%,
+    rgba(122,15,58,0) 100%);
+}
+
+/* Contenido centrado */
+.screen2__content{
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+/* ===== Escenario: cancha + pines + línea + popup ===== */
+/* Sin min-height: el alto lo define la imagen de la cancha
+   para que los % de pines/línea coincidan pixel perfect. */
+.screen2__stage{
+  position: relative;
+  width: min(1180px, 92vw);
+  margin-inline: auto;
+  margin-top: clamp(12px, 7vh, 72px); /* aire entre título y cancha */
+}
+
+/* Cancha */
+.screen2__field{
+  position: relative;
+  z-index: 1;       /* base */
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,.35));
+  pointer-events: none; /* la imagen no bloquea clics */
+}
+
+/* ===== Título (como imagen) ===== */
+.screen2__headingImg{
+  position: absolute;
+  z-index: 2;
+  top: clamp(70px, 13vh, 140px);
+  left: 33%;
+  width: min(680px, 48vw);
+  height: auto;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,.25));
+}
+
+/* ===== Pines ===== */
+.fieldPins{
+  position: absolute;
+  inset: 0;
+  z-index: 3;             /* por encima de la línea */
+  pointer-events: none;
+}
+.fieldPin{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.fieldPin img{
+  width: clamp(36px, 4.6vw, 82px);
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
+}
+
+/* ===== Línea (SVG) ===== */
+.popupLine{
+  position: absolute;
+  inset: 0;
+  z-index: 2;             /* sobre cancha, bajo pines y popup */
+  pointer-events: none;
+  overflow: visible;      /* asegura que el trazo no se recorte */
+}
+
+/* ===== Popup (imagen) =====
+   Posicionado por left/top (%) respecto a .screen2__stage */
+.problemPopup{
+  position: absolute;
+  transform: translate(0, -50%);  /* ancla en borde izquierdo, centro vertical */
+  z-index: 4;                     /* sobre todo */
+}
+
+/* --- TAMAÑO DEL POPUP --- 
+   Cambia este valor y recarga: */
+.problemPopup{
+  --popup-w: min(400px, 46vw);   /* antes tenías 20% */
+}
+
+/* Aplícalo tanto si el JSX tiene __img como __imgOnly */
+.problemPopup__img,
+.problemPopup__imgOnly{
+  width: var(--popup-w) !important;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 28px rgba(0,0,0,.35));
+}
+
+/* Botón PLAY: ajusta estas perillas para “clavarlo” en el círculo del PNG */
+.problemPopup__play{
+  --play-right: clamp(14px, 2.5vw, 30px);   /* distancia al borde derecho del PNG */
+  --play-size:  clamp(36px, 3.2vw, 45px); /* diámetro del botón */
+
+  position: absolute;
+  right: var(--play-right);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--play-size);
+  height: var(--play-size);
+  border-radius: 999px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+/* Cerrar (esquina del popup) */
+.problemPopup__close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(0,0,0,.45);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Línea: fina y por debajo del popup/pines */
+.popupLine{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: visible;
+}

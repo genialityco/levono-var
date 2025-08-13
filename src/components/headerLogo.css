@@ -1,0 +1,10 @@
+.screen2__header{
+  position: absolute;
+  top: clamp(16px, 4vw, 40px);
+  left: clamp(16px, 4vw, 40px);
+  z-index: 2;
+}
+.screen2__header img{
+  width: min(450px, 32vw); /* ajustaremos al pixel luego */
+  display: block;
+}

@@ -1,0 +1,14 @@
+.screen2__footer{
+  position: absolute;
+  left: 0; right: 0;
+  bottom: clamp(14px, 3vh, 26px);
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+.screen2__footer img{
+  width: min(760px, 64vw); /* lo haremos más grande/pequeño según tu referencia */
+  margin-bottom: 1%;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.18));
+}

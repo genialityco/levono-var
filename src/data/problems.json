@@ -1,0 +1,115 @@
+
+
+[
+  {
+    "id": "rest-contraseña",
+     "slug": "rest-contraseña",
+    "title": "Restablecimiento de contraseña",
+    "x": 21,
+    "y": 27,
+    "iconKey": "B01",
+    "popupKey": "P01",
+    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "description": "Qué hacer cuando un usuario no puede iniciar sesión o pierde acceso.",
+    "popup": { "dx": 5, "dy": -39, "anchor": "left" }
+  },
+
+  {
+    "id": "problema-correo-electronico",
+    "slug": "problema-correo-electronico",
+    "title": "Problemas de Correo Electrónico y Comunicación",
+    "x": 26,
+    "y": 72,
+    "iconKey": "B02",
+    "popupKey": "P02",
+    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4.mp4",
+    "description": "Solución de problemas relacionados con el acceso a sistemas o aplicaciones.",
+    "popup": { "dx": 8, "dy": 40, "anchor": "left" }
+  },
+
+  {
+    "id": "solucion-problema-hardware",
+    "slug": "solucion-problema-hardware",
+    "title": "Solución Básica de Problemas de Hardware",
+    "x": 38,
+    "y": 42,
+    "iconKey": "B03",
+    "popupKey": "P03",
+    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4.mp4",
+    "description": "Ayuda a los usuarios para instalar o configurar software aprobado.",
+    "popup": { "dx": 6, "dy": -65, "anchor": "left" }
+  },
+
+  {
+    "id": "prob-inicio-sesion",
+    "slug": "prob-inicio-sesion",
+    "title": "Problemas de Inicio de Sesión y Acceso",
+    "x": 49.5,
+    "y": 13,
+    "iconKey": "B04",
+    "popupKey": "P04",
+    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "description": "Diagnóstico de problemas con teclados, monitores, impresoras, etc.",
+    "popup": { "dx": 6, "dy": -30, "anchor": "left" }
+  },
+
+  {
+    "id": "conectividad-red",
+    "slug": "conectividad-red",
+    "title": "Conectividad de Red",
+    "x": 55,
+    "y": 68,
+    "iconKey": "B05",
+    "popupKey": "P05",
+    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "description": "Resolución de problemas al enviar/recibir correos o configurar clientes de correo.",
+    "popup": { "dx": 4, "dy": 60, "anchor": "left" }
+  },
+
+  {
+    "id": "rendimientos-del-sistema",
+    "slug": "rendimientos-del-sistema",
+    "title": "Problemas de Rendimiento del Sistema",
+    "x": 70,
+    "y": 38,
+    "iconKey": "B06",
+    "popupKey": "P06",
+    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
+    "popup": { "dx": 6, "dy": -50, "anchor": "left" }
+  },
+
+  {
+    "id": "insta-software",
+    "slug": "insta-software",
+    "title": "Instalación y Configuración de Software",
+    "x": 78.5,
+    "y": 16,
+    "iconKey": "B07",
+    "popupKey": "P07",
+    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "description": "Atención a computadoras lentas o aplicaciones con retraso.",
+    "popup": { "dx": 8, "dy": -50, "anchor": "left" }
+  },
+
+  {
+    "id": "canalización-de-tickets",
+     "slug": "canalización-de-tickets",
+    "title": "Canalización de Tickets",
+    "x": 84.5,
+    "y": 52,
+    "iconKey": "B08",
+    "popupKey": "P08",
+    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
+    "popup": { "dx": 10, "dy": -30, "anchor": "left" }
+  }
+]

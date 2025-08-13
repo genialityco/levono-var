@@ -1,0 +1,76 @@
+/* ===== Pantalla base ===== */
+.revisar{
+  position: relative;
+  min-height: 100svh;
+  color: #fff;
+  overflow: hidden;
+
+  /* knobs */
+  --stage-w: min(1180px, 92vw);
+  --frame-w: min(980px, 86vw);
+  --cta-top: 78%;        /* ajusta posición vertical del botón dentro del marco */
+}
+
+/* Fondo */
+.revisar__bg,
+.revisar__overlay{
+  position: absolute;
+  inset: 0;
+}
+.revisar__bg{
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+}
+.revisar__overlay{
+  background: linear-gradient(90deg,
+    rgba(226,35,26,0) 0%,
+    rgba(77,16,71,0) 48%,
+    rgba(122,15,58,0) 100%);
+}
+
+/* Contenido centrado */
+.revisar__content{
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.revisar__stage{
+  position: relative;
+  width: var(--stage-w);
+  margin-inline: auto;
+}
+
+.revisar__frame{
+  width: var(--frame-w);
+  height: auto;
+  display: block;
+  margin-inline: auto;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.35));
+  pointer-events: none;
+}
+
+/* CTA (botón dentro del marco) */
+.revisar__cta{
+  position: absolute;
+  left: 50%;
+  top: var(--cta-top);
+  transform: translate(-50%, -50%);
+  padding: clamp(12px, 1.8vw, 20px) clamp(6px, 0.1vw, 4px);
+  font-size: clamp(14px, 3.4vw, 35px);
+  font-weight: 900;
+  line-height: 1.2;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg, #B30000 0%, #9B0050 50%);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+.revisar__cta:active{
+  transform: translate(-50%, -50%) scale(.98);
+}
+  
