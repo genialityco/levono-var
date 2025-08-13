@@ -9,8 +9,8 @@
     "y": 27,
     "iconKey": "B01",
     "popupKey": "P01",
-    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
-    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "videoUrl": "/videos/Video_nvidia.mp4",
+    "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Qué hacer cuando un usuario no puede iniciar sesión o pierde acceso.",
     "popup": { "dx": 5, "dy": -39, "anchor": "left" }
   },
@@ -23,8 +23,8 @@
     "y": 72,
     "iconKey": "B02",
     "popupKey": "P02",
-    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
-    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4.mp4",
+    "videoUrl": "/videos/Video_nvidia.mp4",
+    "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Solución de problemas relacionados con el acceso a sistemas o aplicaciones.",
     "popup": { "dx": 8, "dy": 40, "anchor": "left" }
   },
@@ -37,8 +37,8 @@
     "y": 42,
     "iconKey": "B03",
     "popupKey": "P03",
-    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
-    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4.mp4",
+    "videoUrl": "/videos/Video_nvidia.mp4",
+    "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Ayuda a los usuarios para instalar o configurar software aprobado.",
     "popup": { "dx": 6, "dy": -65, "anchor": "left" }
   },
@@ -51,8 +51,8 @@
     "y": 13,
     "iconKey": "B04",
     "popupKey": "P04",
-    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
-    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "videoUrl": "/videos/Video_nvidia.mp4",
+    "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Diagnóstico de problemas con teclados, monitores, impresoras, etc.",
     "popup": { "dx": 6, "dy": -30, "anchor": "left" }
   },
@@ -65,8 +65,8 @@
     "y": 68,
     "iconKey": "B05",
     "popupKey": "P05",
-    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
-    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "videoUrl": "/videos/Video_nvidia.mp4",
+    "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Resolución de problemas al enviar/recibir correos o configurar clientes de correo.",
     "popup": { "dx": 4, "dy": 60, "anchor": "left" }
   },
@@ -79,8 +79,8 @@
     "y": 38,
     "iconKey": "B06",
     "popupKey": "P06",
-    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
-    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "videoUrl": "/videos/Video_nvidia.mp4",
+    "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
     "popup": { "dx": 6, "dy": -50, "anchor": "left" }
   },
@@ -93,8 +93,8 @@
     "y": 16,
     "iconKey": "B07",
     "popupKey": "P07",
-    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
-    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "videoUrl": "/videos/Video_nvidia.mp4",
+    "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Atención a computadoras lentas o aplicaciones con retraso.",
     "popup": { "dx": 8, "dy": -50, "anchor": "left" }
   },
@@ -107,8 +107,8 @@
     "y": 52,
     "iconKey": "B08",
     "popupKey": "P08",
-    "videoUrl": "/videos/video_prueba_30s_error_lenovo.mp4",
-    "solucionVideo": "/videos/video_prueba_30s_error_lenovo.mp4",
+    "videoUrl": "/videos/Video_nvidia.mp4",
+    "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
     "popup": { "dx": 10, "dy": -30, "anchor": "left" }
   }
