@@ -164,3 +164,86 @@
   overflow: visible;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .screen2__stage{
+    position: relative;
+    width: min(780px,100vw);
+    margin-inline: auto;
+    margin-top: clamp(12px, 7vh, 72px); /* aire entre título y cancha */
+  }
+
+  .problemPopup{
+    --popup-w: min(270px, 46vw);   /* antes tenías 20% */
+  }
+  .problemPopup__play{
+    --play-right: clamp(14px, 2.5vw, 3px);   /* distancia al borde derecho del PNG */
+    --play-size:  clamp(30px, 0.2vw, 15px); /* diámetro del botón */
+  }
+
+  .screen2__headingImg{
+    position: absolute;
+    z-index: 2;
+    top: clamp(70px, 9vh, 140px);
+    left: 33%;
+    width: min(680px, 48vw);
+    height: auto;
+    filter: drop-shadow(0 2px 12px rgba(0,0,0,.25));
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+  .screen2__stage{
+    position: relative;
+    width: min(680px,100vw);
+    margin-inline: auto;
+    margin-top: clamp(12px, 7vh, 72px); /* aire entre título y cancha */
+  }
+
+  .problemPopup{
+    --popup-w: min(270px, 46vw);   /* antes tenías 20% */
+  }
+  .problemPopup__play{
+    --play-right: clamp(14px, 2.5vw, 3px);   /* distancia al borde derecho del PNG */
+    --play-size:  clamp(30px, 0.2vw, 15px); /* diámetro del botón */
+  }
+
+  .screen2__headingImg{
+    position: absolute;
+    z-index: 2;
+    top: clamp(70px, 9vh, 140px);
+    left: 33%;
+    width: min(680px, 48vw);
+    height: auto;
+    filter: drop-shadow(0 2px 12px rgba(0,0,0,.25));
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1444px) and (orientation: landscape){
+  .screen2__stage{
+    position: relative;
+    width: min(880px,100vw);
+    margin-inline: auto;
+    margin-top: clamp(12px, 7vh, 72px); /* aire entre título y cancha */
+  }
+
+  .problemPopup{
+    --popup-w: min(270px, 46vw);   /* antes tenías 20% */
+  }
+  .problemPopup__play{
+    --play-right: clamp(14px, 2.5vw, 3px);   /* distancia al borde derecho del PNG */
+    --play-size:  clamp(30px, 0.2vw, 15px); /* diámetro del botón */
+  }
+
+  .screen2__headingImg{
+    position: absolute;
+    z-index: 2;
+    top: clamp(70px, 9vh, 140px);
+    left: 33%;
+    width: min(680px, 48vw);
+    height: auto;
+    filter: drop-shadow(0 2px 12px rgba(0,0,0,.25));
+  }
+}
+
+

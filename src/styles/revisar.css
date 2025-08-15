@@ -77,5 +77,23 @@
 }
   
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .revisar{
+    /* knobs */
+    --stage-w: min(1180px, 92vw);
+    --frame-w: min(720px, 86vw);
+    --cta-top: 78%;        /* ajusta posición vertical del botón dentro del marco */
+  }  
+
+  .revisar__cta{
+    width: 35%;
+    font-size: clamp(14px, 3.4vw, 25px);
+  }
+
+
+}
+
+
 
 

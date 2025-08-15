@@ -101,3 +101,20 @@
   margin-top: -5% !important;
   margin: clamp(6px, 1vh, 100px) auto 0; /* muy pegado al logo */
 }
+
+
+/* Tablet horizontal */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* estilos aquí */
+
+    .home__logo {
+      width: clamp(50%, 3.6vh, 20px);      /* antes 720 */
+    }
+    .home__texto{
+      width: min(700px, 90vw);
+    }
+
+    .home__cta-img img {
+      width: min(200px, 45vw);
+    }
+}

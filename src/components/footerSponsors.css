@@ -7,8 +7,14 @@
   z-index: 2;
 }
 .screen2__footer img{
-  width: min(760px, 64vw); /* lo haremos más grande/pequeño según tu referencia */
+  width: min(760px, 64vw); 
   margin-bottom: 1%;
   display: block;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,.18));
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+  .screen2__footer img{
+    width: min(580px, 64vw); 
+  } 
 }

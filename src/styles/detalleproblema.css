@@ -137,3 +137,68 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .detail{
+    --frame-w: 70%;
+    --stage-w: min(850px, 82vw);   /* ancho total del marco */
+    --video-w: min(612px, 86vw);    /* ancho del video dentro del marco */
+    --video-top:52%; 
+     /* ancho visible del rectángulo rojo respecto al marco */
+    --banner-w: 45%;
+    /* posición vertical del banner (sube/baja el grupo icono+texto) */
+    --banner-top: 24.2%;
+    /* separación icono / texto y aire lateral interno (no es fondo nuevo) */
+    --banner-gap: 12px;
+    --banner-pad-x: 14px;
+  }
+
+    .detail__stage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+
+    .detail__title{
+      left:55.5%;
+      width: var(--banner-w);       /* << limita el ancho del bloque */
+    }
+      
+  .detail__back{
+    top: clamp(14px, 10vh, 88px);
+    left: clamp(12px, 6vw, 106px);
+    font-size: clamp(18px, 2.9vw, 25px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+
+ .detail{
+    --frame-w: 75%;
+    --stage-w: min(850px, 82vw);   /* ancho total del marco */
+    --video-w: min(542px, 86vw);    /* ancho del video dentro del marco */
+    --video-top:53.5%; 
+     /* ancho visible del rectángulo rojo respecto al marco */
+    --banner-w: 35%;
+    /* posición vertical del banner (sube/baja el grupo icono+texto) */
+    --banner-top: 16.2%;
+    /* separación icono / texto y aire lateral interno (no es fondo nuevo) */
+  }
+  
+  .detail__stage {
+        margin-top: -5%;
+  }
+
+  .detail__back{
+    top: clamp(10px, 4vh, 88px);
+    left: clamp(12px, 6vw, 36px);
+    font-size: clamp(18px, 2.9vw, 25px);
+  }
+
+  .detail__title{
+      left:50%;
+      width: var(--banner-w);       /* << limita el ancho del bloque */
+    }
+
+}

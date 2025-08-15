@@ -8,3 +8,13 @@
   width: min(450px, 32vw); /* ajustaremos al pixel luego */
   display: block;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+  .screen2__header img{
+    width: min(350px, 32vw); /* ajustaremos al pixel luego */
+  }
+  .screen2__header{
+    top: clamp(6px, 2vw, 4px);
+    left: clamp(6px, 2vw, 4px);
+  }
+}

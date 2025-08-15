@@ -79,3 +79,17 @@
 }
 
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .thanks__hero{
+    width: min(380px, 70vw);
+  }
+
+  .thanks__cta{
+    bottom: 40%; /* ajusta según donde lo quieras dentro de la imagen */
+    font-size: clamp(16px, 3.5vw, 25px);
+  }
+
+}
+
+
