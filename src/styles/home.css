@@ -50,7 +50,7 @@
 
 /* Logo central grande */
 .home__logo {
-  width: 60%;       /* antes 720 */
+  width: clamp(60%, 3.6vh, 20px);      /* antes 720 */
   display: block;
   margin-inline: auto;
   margin-top: -20%;
