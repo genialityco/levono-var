@@ -96,7 +96,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Atención a computadoras lentas o aplicaciones con retraso.",
-    "popup": { "dx": 8, "dy": -50, "anchor": "left" }
+    "popup": { "dx": -6, "dy": -50, "anchor": "left" }
   },
 
   {
@@ -110,6 +110,6 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
-    "popup": { "dx": 10, "dy": -30, "anchor": "left" }
+    "popup": { "dx": -10, "dy":70, "anchor": "left" }
   }
 ]

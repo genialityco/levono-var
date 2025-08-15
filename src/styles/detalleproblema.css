@@ -180,7 +180,7 @@
     --video-w: min(542px, 86vw);    /* ancho del video dentro del marco */
     --video-top:53.5%; 
      /* ancho visible del rectángulo rojo respecto al marco */
-    --banner-w: 35%;
+    --banner-w: 3%;
     /* posición vertical del banner (sube/baja el grupo icono+texto) */
     --banner-top: 16.2%;
     /* separación icono / texto y aire lateral interno (no es fondo nuevo) */
@@ -201,4 +201,55 @@
       width: var(--banner-w);       /* << limita el ancho del bloque */
     }
 
+}
+
+
+/* Asegura capas correctas en todos los tamaños */
+.detail__frame { z-index: 1; }
+.detail__video { z-index: 2; }
+.detail__title { z-index: 3; }
+
+/* Rango que cubre 1280x800 aprox (landscape 16:10) */
+@media screen
+  and (min-width: 1200px) and (max-width: 1366px)
+  and (min-height: 760px) and (max-height: 840px)
+  and (orientation: landscape) {
+
+  .detail{
+    --stage-w: min(1000px, 84vw);
+    --frame-w: 74%;
+    --video-w: min(630px, 64vw);
+    --video-top: 53%;
+    --banner-w: 44%;
+    --banner-top: 18.5%;
+  }
+
+  /* Centrado vertical y horizontal real */
+  .detail__stage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px); /* deja algo de aire */
+    margin: 0 auto; /* elimina márgenes que lo muevan */
+  }
+
+  .detail__title{
+    left: 55%;
+    transform: translateX(-50%);
+    width: var(--banner-w);
+  }
+
+
+
+  .detail__titleText{
+    font-size: clamp(16px, 1vw, 22px);
+  }
+
+  .detail__back{
+    position: absolute;
+    top: clamp(10px, 5vh, 60px);
+    left: clamp(16px, 4vw, 40px);
+    font-size: clamp(18px, 2vw, 24px);
+  }
 }
