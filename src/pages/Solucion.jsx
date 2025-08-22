@@ -9,6 +9,7 @@ import HeaderLogo from "../components/HeaderLogo";
 import "../styles/solucion.css";
 
 export default function Solucion() {
+  
   // mantenemos el mismo patrón que ya te funciona en DetalleProblema
   const { id: slug } = useParams();
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ export default function Solucion() {
   if (!problem) return null;
 
   const handleBack = () => navigate("/seleccion");
+
 
   const handleEnded = () => {
     // ¿A dónde vas al terminar? Si tienes una pantalla intermedia, cámbialo aquí.
@@ -70,6 +72,7 @@ export default function Solucion() {
           <video
             ref={videoRef}
             className="solution__video"
+            data-foreground-video 
             src={problem.solucionVideo}
             controls
             autoPlay

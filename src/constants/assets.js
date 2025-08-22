@@ -41,11 +41,10 @@ import lenovoServiceDesk from '../assets/images/LENOVO SDESK SERVICES.svg'
 import fondoGracias from '../assets/images/backgrounds/FONDOS-05.png';
 import problemaSolucionado from '../assets/images/PROBLEMA-SOLUCIONADO.png';
 import marcoRevisar from '../assets/images/MARCO_REVISAR_DE_NUEVO.svg';
+import backgroundaudio from '../assets/Audios/AUDIO_LENOVO.mp3';
 
 
-
-
-// Si más adelante agregas íconos u otros fondos, los añades aquí.
+export const AUDIOS ={backgroundaudio}
 export const ICONS = { B01, B02, B03, B04, B05, B06, B07, B08 };
 export const POPUPS = { P01, P02, P03, P04, P05, P06, P07, P08  };
 export const VIDEOS = {

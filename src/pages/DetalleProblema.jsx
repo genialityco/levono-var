@@ -79,6 +79,7 @@ export default function DetalleProblema() {
         <video
           ref={videoRef}
           className="detail__video"
+          data-foreground-video 
           src={problem.videoUrl}
           controls
           autoPlay
