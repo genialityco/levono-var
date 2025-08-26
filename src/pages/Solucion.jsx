@@ -28,7 +28,7 @@ export default function Solucion() {
 
   if (!problem) return null;
 
-  const handleBack = () => navigate("/seleccion");
+  //const handleBack = () => navigate("/seleccion");
 
 
   const handleEnded = () => {

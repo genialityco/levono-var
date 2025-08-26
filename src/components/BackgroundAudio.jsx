@@ -71,7 +71,7 @@ export default function BackgroundAudio() {
     const el = audioRef.current;
     if (!el) return;
 
-    let currentPlaying = 0;
+   // let currentPlaying = 0;
 
     const selector = 'video[data-foreground-video]';
     const handleState = () => {
@@ -95,7 +95,7 @@ export default function BackgroundAudio() {
     // Adjunta a los actuales
     const initial = document.querySelectorAll(selector);
     initial.forEach(attach);
-    currentPlaying = initial.length;
+    //currentPlaying = initial.length;
 
     // Observa el DOM por si se montan/desmontan videos protagonistas
     const mo = new MutationObserver(() => {
@@ -103,7 +103,7 @@ export default function BackgroundAudio() {
       // para simpleza, desata y reata a todos (son muy pocos)
       initial.forEach(detach);
       vids.forEach(attach);
-      currentPlaying = vids.length;
+      //currentPlaying = vids.length;
       handleState();
     });
     mo.observe(document.body, { childList: true, subtree: true });

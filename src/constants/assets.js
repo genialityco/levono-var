@@ -42,7 +42,8 @@ import fondoGracias from '../assets/images/backgrounds/FONDOS-05.png';
 import problemaSolucionado from '../assets/images/PROBLEMA-SOLUCIONADO.png';
 import marcoRevisar from '../assets/images/MARCO_REVISAR_DE_NUEVO.svg';
 import backgroundaudio from '../assets/Audios/AUDIO_LENOVO.mp3';
-
+import texto_marca_1 from '../assets/images/textto_marca_1.webp';
+import texto_marca_2 from '../assets/images/texto_marca_2.webp';
 
 export const AUDIOS ={backgroundaudio}
 export const ICONS = { B01, B02, B03, B04, B05, B06, B07, B08 };
@@ -71,5 +72,7 @@ export const IMAGES = {
   lenovoServiceDesk,
   fondoGracias,
   problemaSolucionado,
-  marcoRevisar  
+  marcoRevisar,
+  texto_marca_1,
+  texto_marca_2
 }

@@ -99,4 +99,51 @@
   to { transform: rotate(360deg); }
 }
 
+/* ---------- Carrusel de mensajes de marca ---------- */
+
+.brandCarousel {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Ajuste vertical para que quede sobre la parte baja, como la referencia */
+  bottom: clamp(8px, 4vh, 10px);
+  z-index: 3;
+  pointer-events: none; /* no bloquea clicks de nada debajo */
+  /* ancho máximo: similar a la franja de texto en ref */
+  width: min(1100px, 86vw);
+}
+
+/* El slide entra desde la derecha y se asienta */
+.brandSlide {
+  display: grid;
+  place-items: center;
+  animation: slideInRight 600ms cubic-bezier(.2,.9,.2,1) 1 both;
+}
+
+/* La imagen del slide */
+.brandSlide__img {
+  width: 100%;
+  margin-top: 10%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 28px rgba(0,0,0,.35));
+  user-select: none;
+}
+
+/* Entrada desde derecha y leve "pop" */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40%) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Respeto a usuarios con reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .brandSlide { animation: none; }
+}
 
