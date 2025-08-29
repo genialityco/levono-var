@@ -41,7 +41,7 @@
 
 /* Imagen “Problema solucionado” */
 .thanks__hero{
-  width: min(480px, 70vw);
+  width: min(580px, 70vw);
   height: auto;
   display: block;
   filter: drop-shadow(0 12px 28px rgba(0,0,0,.35));
@@ -51,8 +51,8 @@
 /* Botón Continuar (rojo, redondeado) */
 .thanks__cta{
   position: absolute;
-  bottom: 30%; /* ajusta según donde lo quieras dentro de la imagen */
-  left: 49%;
+  bottom: 16%; /* ajusta según donde lo quieras dentro de la imagen */
+  left: 50%;
   transform: translateX(-50%);
   appearance: none;
   border: 0;

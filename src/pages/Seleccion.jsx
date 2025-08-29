@@ -72,17 +72,17 @@ export default function Seleccion() {
   };
 
   return (
-    <section className="screen2" >
+    <section className="screen2">
       <video
-              className="home__bgVideo"
-              src={VIDEOS.bg2video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              poster={IMAGES.bg2}
-            />
+        className="home__bgVideo"
+        src={VIDEOS.bg2video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster={IMAGES.bg2}
+      />
       {/* Fondo */}
       <div className="screen2__bg" />
       <div className="screen2__overlay" />
@@ -128,7 +128,7 @@ export default function Seleccion() {
           </div>
 
           {/* Línea conectora (pendiente dibujar más adelante) */}
-          {/* {connector && (
+           {/*{connector && (
             <svg
               className="popupLine"
               width="100%"
@@ -145,8 +145,8 @@ export default function Seleccion() {
                 strokeLinecap="round"
               />
             </svg>
-          )} */}
 
+          )} */}
           {/* Popup */}
           {active && popupPos && (
             <div

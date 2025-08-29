@@ -88,8 +88,8 @@ export default function DetalleProblema() {
 
       </main>
 
-      {/* Sponsors */}
-      <FooterSponsors />
+      {/* Sponsors 
+      <FooterSponsors />*/}
     </section>
   );
 }

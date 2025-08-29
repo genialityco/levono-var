@@ -45,7 +45,7 @@ export default function Revisar() {
               className="revisar__cta"
               onClick={() => navigate("/seleccion")}
             >
-              ¡Toca aquí para volver al Lenovo PlayCheck Desk!
+              ¡Toca aquí para comenzar!
           </button>
           </div>
         </div>

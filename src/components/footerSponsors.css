@@ -1,13 +1,13 @@
 .screen2__footer{
   position: absolute;
-  left: 0; right: 0;
-  bottom: clamp(14px, 3vh, 26px);
+  left: 62%; right: 0;
+  top: clamp(74px, 3vh, 56px);
   display: grid;
   place-items: center;
   z-index: 2;
 }
 .screen2__footer img{
-  width: min(760px, 64vw); 
+  width: min(560px, 64vw); 
   margin-bottom: 1%;
   display: block;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,.18));

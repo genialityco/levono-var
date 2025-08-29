@@ -7,7 +7,7 @@ import logoPlayCheck from '../assets/images/logo/LOGO-LENOVO_PLAYCHECK.png'
 import bgHome from '../assets/images/backgrounds/FONDOS-01.png'
 import logosfooter from '../assets/images/logo/LOGOS_FOOTER.png'
 import btnComenzar from '../assets/images/BOTON_COMENZAR.png'
-import texthome from '../assets/images/text-home.png'
+import texthome from '../assets/images/TETXO_INICIO.svg'
 import bg2 from '../assets/images/backgrounds/FONDOS-02.png'
 import homebg from '../assets/images/animacion/FONDOS_LENOVO_01.mp4'
 import bg2video from '../assets/images/animacion/FONDOS_LENOVO_02.mp4'
@@ -23,24 +23,25 @@ import B06 from '../assets/images/Botones/BOTONES_MENU-06.png'
 import B07 from '../assets/images/Botones/BOTONES_MENU-07.png'
 import B08 from '../assets/images/Botones/BOTONES_MENU-08.png'
 import P01 from '../assets/images/PopUp/PROBLEMA-1.png'
-import P02 from '../assets/images/PopUp/PROBLEMA-2.png'
-import P03 from '../assets/images/PopUp/PROBLEMA-3.png'
-import P04 from '../assets/images/PopUp/PROBLEMA-4.png'
-import P05 from '../assets/images/PopUp/PROBLEMA-5.png'
-import P06 from '../assets/images/PopUp/PROBLEMA-6.png'
-import P07 from '../assets/images/PopUp/PROBLEMA-7.png'
+import P02 from '../assets/images/PopUp/PROBLEMA-5.png'
+import P03 from '../assets/images/PopUp/PROBLEMA-4.png'
+import P04 from '../assets/images/PopUp/PROBLEMA-2.png'
+import P05 from '../assets/images/PopUp/PROBLEMA-6.png'
+import P06 from '../assets/images/PopUp/PROBLEMA-7.png'
+import P07 from '../assets/images/PopUp/PROBLEMA-3.png'
 import P08 from '../assets/images/PopUp/PROBLEMA-8.png'
 import canchaMenu from '../assets/images/CANCHA_MENU.png'
 import texto_problemas from '../assets/images/texto-ventama-problemas.png'
 import canchaloading from '../assets/images/CANCHA_LOADING.png'
 import marcoVideo01 from '../assets/images/MARCO_VIDEO_01.png'
+import marcoVideo02 from '../assets/images/CUADRO-VIDEOS.png'
 import bg3 from '../assets/images/backgrounds/FONDOS-03.png'
 import fondoEncuesta from '../assets/images/backgrounds/FONDOS-04.png';
-import marcoEncuesta from '../assets/images/MARCO_SOLUCION.svg';
+import marcoEncuesta from '../assets/images/CUADRO-SOLUCION.png';
 import lenovoServiceDesk from '../assets/images/LENOVO SDESK SERVICES.svg'
 import fondoGracias from '../assets/images/backgrounds/FONDOS-05.png';
-import problemaSolucionado from '../assets/images/PROBLEMA-SOLUCIONADO.png';
-import marcoRevisar from '../assets/images/MARCO_REVISAR_DE_NUEVO.svg';
+import problemaSolucionado from '../assets/images/MARCO_RESULTADOS.png';
+import marcoRevisar from '../assets/images/MARCO_CIERRE.png';
 import backgroundaudio from '../assets/Audios/AUDIO_LENOVO.mp3';
 import texto_marca_1 from '../assets/images/textto_marca_1.webp';
 import texto_marca_2 from '../assets/images/texto_marca_2.webp';
@@ -74,5 +75,6 @@ export const IMAGES = {
   problemaSolucionado,
   marcoRevisar,
   texto_marca_1,
-  texto_marca_2
+  texto_marca_2,
+  marcoVideo02
 }

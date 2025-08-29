@@ -42,7 +42,7 @@
   position: relative;
   width: min(1180px, 92vw);
   margin-inline: auto;
-  margin-top: clamp(12px, 7vh, 72px); /* aire entre título y cancha */
+  margin-top: clamp(12px, 37vh, 272px); /* aire entre título y cancha */
 }
 
 /* Cancha */
@@ -60,7 +60,7 @@
 .screen2__headingImg{
   position: absolute;
   z-index: 2;
-  top: clamp(70px, 13vh, 140px);
+  top: clamp(70px, 24vh, 380px);
   left: 33%;
   width: min(680px, 48vw);
   height: auto;
@@ -211,7 +211,7 @@
   .screen2__headingImg{
     position: absolute;
     z-index: 2;
-    top: clamp(70px, 9vh, 140px);
+    top: clamp(70px, 15vh, 140px);
     left: 33%;
     width: min(680px, 48vw);
     height: auto;

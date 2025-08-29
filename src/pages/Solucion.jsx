@@ -54,7 +54,7 @@ export default function Solucion() {
           poster={IMAGES.bg2}
         />
 
-      <HeaderLogo />
+      {/*<HeaderLogo />*/}
       <div className="solution__bg" />
       <div className="solution__overlay" />
 
@@ -81,7 +81,7 @@ export default function Solucion() {
         </div>
       </main>
 
-      <FooterSponsors />
+     {/*} <FooterSponsors />*/}
     </section>
   );
 }

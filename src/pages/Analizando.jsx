@@ -18,7 +18,7 @@ export default function Analizando() {
     []
   );
 
-  const SLIDE_MS = 3500;     // duración de cada slide
+  const SLIDE_MS = 10000;     // duración de cada slide
   const [idx, setIdx] = useState(0);
 
   // Avance del carrusel

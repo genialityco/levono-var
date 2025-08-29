@@ -117,7 +117,7 @@
 .brandSlide {
   display: grid;
   place-items: center;
-  animation: slideInRight 600ms cubic-bezier(.2,.9,.2,1) 1 both;
+  animation: slideInRight 5500ms cubic-bezier(.2,.9,.2,1) 1 both;
 }
 
 /* La imagen del slide */
