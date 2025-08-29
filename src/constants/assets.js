@@ -33,7 +33,7 @@ import P08 from '../assets/images/PopUp/PROBLEMA-8.png'
 import canchaMenu from '../assets/images/CANCHA_MENU.png'
 import texto_problemas from '../assets/images/texto-ventama-problemas.png'
 import canchaloading from '../assets/images/CANCHA_LOADING.png'
-import marcoVideo01 from '../assets/images/MARCO_VIDEO_01.png'
+import marcoVideo01 from '../assets/images/CUADRO-VIDEOS_02.png'
 import marcoVideo02 from '../assets/images/CUADRO-VIDEOS.png'
 import bg3 from '../assets/images/backgrounds/FONDOS-03.png'
 import fondoEncuesta from '../assets/images/backgrounds/FONDOS-04.png';

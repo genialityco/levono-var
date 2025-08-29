@@ -6,10 +6,10 @@
   color: #fff;
 
   /* Perillas (ajústalas sin tocar el resto) */
-  --stage-w: min(950px, 92vw);   /* ancho total del marco */
+  --stage-w: min(1220px, 92vw);   /* ancho total del marco */
   --frame-w: 100%;                /* marco ocupa todo el stage */
-  --video-w: min(812px, 86vw);    /* ancho del video dentro del marco */
-  --video-top:54%;               /* % desde arriba del marco hasta el centro del video */
+  --video-w: min(1028px, 86vw);    /* ancho del video dentro del marco */
+  --video-top:46%;               /* % desde arriba del marco hasta el centro del video */
   
 }
 
@@ -46,7 +46,7 @@
   position: relative;
   z-index: 1;
   width: var(--stage-w);
-  margin: clamp(70px, 11vh, 120px) auto 0;
+  margin: clamp(50px, 0vh, 0px) auto 0;
 }
 
 /* Marco */
@@ -64,7 +64,7 @@
   /* ancho visible del rectángulo rojo respecto al marco */
   --banner-w: 45%;
   /* posición vertical del banner (sube/baja el grupo icono+texto) */
-  --banner-top: 5.5%;
+  --banner-top: 4.8%;
   /* separación icono / texto y aire lateral interno (no es fondo nuevo) */
   --banner-gap: 12px;
   --banner-pad-x: 14px;
@@ -73,7 +73,7 @@
 /* Contenedor del título encima de la franja roja del marco */
 .detail__title{
   position: absolute;
-  top: var(--banner-top);
+  bottom: var(--banner-top);
   left: 50%;
   transform: translateX(-50%);
   width: var(--banner-w);       /* << limita el ancho del bloque */
@@ -89,7 +89,7 @@
 
 /* Icono fijo, que no se encoja */
 .detail__titleIcon{
-  width: clamp(22px, 3.6vw, 60px);
+  width: clamp(22px, 4.6vw, 80px);
   height: auto;
   flex: 0 0 auto;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,.3));
@@ -99,7 +99,7 @@
 .detail__titleText{
   flex: 1 1 auto;               /* ocupa el resto del ancho */
   font-weight: 800;
-  font-size: clamp(16px, 1.9vw, 24px);
+  font-size: clamp(16px, 1.9vw, 28px);
   line-height: 1.15;
   letter-spacing: .2px;
   text-shadow: 0 2px 8px rgba(0,0,0,.35);
@@ -121,7 +121,7 @@
   top: var(--video-top);
   transform: translate(-50%, -50%);
   width: var(--video-w);
-  max-height: 450px; /* 🔹 Ajusta este valor para que baje la altura */
+  max-height: 600px; /* 🔹 Ajusta este valor para que baje la altura */
   object-fit: contain; /* Mantiene proporción original */
   border-radius: 10px;
   box-shadow: 0 10px 26px rgba(0,0,0,.35);

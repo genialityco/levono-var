@@ -9,17 +9,13 @@ import HeaderLogo from "../components/HeaderLogo";
 import "../styles/solucion.css";
 
 export default function Solucion() {
-  
   // mantenemos el mismo patrón que ya te funciona en DetalleProblema
   const { id: slug } = useParams();
   const navigate = useNavigate();
   const videoRef = useRef(null);
 
   // Buscar el problema por slug (igual que en DetalleProblema)
-  const problem = useMemo(
-    () => problems.find((p) => p.slug === slug),
-    [slug]
-  );
+  const problem = useMemo(() => problems.find((p) => p.slug === slug), [slug]);
 
   // Si no existe, volvemos a selección
   useEffect(() => {
@@ -30,7 +26,6 @@ export default function Solucion() {
 
   //const handleBack = () => navigate("/seleccion");
 
-
   const handleEnded = () => {
     // ¿A dónde vas al terminar? Si tienes una pantalla intermedia, cámbialo aquí.
     // Por ejemplo: navigate("/gracias");
@@ -38,50 +33,49 @@ export default function Solucion() {
   };
 
   return (
-    <section
-      
-      className="solution"
-      
-    >
-        <video
-          className="home__bgVideo"
-          src={VIDEOS.bg4video}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster={IMAGES.bg2}
-        />
+    <section className="solution">
+      <video
+        className="home__bgVideo"
+        src={VIDEOS.bg4video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster={IMAGES.bg2}
+      />
 
       {/*<HeaderLogo />*/}
       <div className="solution__bg" />
       <div className="solution__overlay" />
 
-      <main className="solution__content">
-        {/* Título (imagen) */}
+      <main className="solutionStage">
+        {/* Marco PNG para Solución (puede ser el mismo o uno específico) */}
         <img
-          src={IMAGES.lenovoServiceDesk}   // <- imagen "Lenovo Service Desk"
-          alt="Lenovo Service Desk"
-          className="solution__titleImg"
+          className="solutionFrame"
+          src={IMAGES.marcoVideo02 /* o el marco que quieras en Solución */}
+          alt=""
           draggable={false}
         />
 
-        {/* Panel blanco con el video dentro */}
-        <div className="solution__videoWrap">
-          <video
-            ref={videoRef}
-            className="solution__video"
-            data-foreground-video 
-            src={problem.solucionVideo}
-            controls
-            autoPlay
-            onEnded={handleEnded}
-          />
-        </div>
+        {/* (Opcional) etiqueta/título encima de la franja del marco
+        <div className="solutionRibbon">
+          <span className="solutionRibbon__text">Lenovo Service Desk</span>
+        </div> */}
+
+        {/* Video “encajado” dentro del rectángulo del marco */}
+        <video
+          ref={videoRef}
+          className="solutionVideo"
+          src={problem.solucionVideo}
+          controls
+          autoPlay
+          onEnded={handleEnded}
+          data-foreground-video
+        />
       </main>
 
-     {/*} <FooterSponsors />*/}
+      {/*} <FooterSponsors />*/}
     </section>
   );
 }
