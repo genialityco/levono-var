@@ -5,7 +5,7 @@
 // Imágenes
 import logoPlayCheck from '../assets/images/logo/LOGO-LENOVO_PLAYCHECK.png'
 import bgHome from '../assets/images/backgrounds/FONDOS-01.png'
-import logosfooter from '../assets/images/logo/LOGOS_FOOTER.png'
+import logosfooter from '../assets/images/logo/LOGOS.png'
 import btnComenzar from '../assets/images/BOTON_COMENZAR.png'
 import texthome from '../assets/images/TETXO_INICIO.svg'
 import bg2 from '../assets/images/backgrounds/FONDOS-02.png'
@@ -31,9 +31,9 @@ import P06 from '../assets/images/PopUp/PROBLEMA-7.png'
 import P07 from '../assets/images/PopUp/PROBLEMA-3.png'
 import P08 from '../assets/images/PopUp/PROBLEMA-8.png'
 import canchaMenu from '../assets/images/CANCHA_MENU.png'
-import texto_problemas from '../assets/images/texto-ventama-problemas.png'
+import texto_problemas from '../assets/images/TEXTOS_02.svg'
 import canchaloading from '../assets/images/CANCHA_LOADING.png'
-import marcoVideo01 from '../assets/images/CUADRO-VIDEOS_02.png'
+import marcoVideo01 from '../assets/images/CUADRO-VIDEOS_02_1.png'
 import marcoVideo02 from '../assets/images/CUADRO-VIDEOS.png'
 import bg3 from '../assets/images/backgrounds/FONDOS-03.png'
 import fondoEncuesta from '../assets/images/backgrounds/FONDOS-04.png';
@@ -43,8 +43,8 @@ import fondoGracias from '../assets/images/backgrounds/FONDOS-05.png';
 import problemaSolucionado from '../assets/images/MARCO_RESULTADOS.png';
 import marcoRevisar from '../assets/images/MARCO_CIERRE.png';
 import backgroundaudio from '../assets/Audios/AUDIO_LENOVO.mp3';
-import texto_marca_1 from '../assets/images/textto_marca_1.webp';
-import texto_marca_2 from '../assets/images/texto_marca_2.webp';
+import texto_marca_1 from '../assets/images/TEXTOS_03-02.svg';
+import texto_marca_2 from '../assets/images/TEXTOS_03-01.svg';
 
 export const AUDIOS ={backgroundaudio}
 export const ICONS = { B01, B02, B03, B04, B05, B06, B07, B08 };

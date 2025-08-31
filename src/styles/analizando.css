@@ -84,7 +84,7 @@
   text-align: center;
   font-weight: 700;
   line-height: 1.1;
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(1px, 2vw, 20px);
   width: clamp(120px, 18vw, 240px);
   aspect-ratio: 1/1;
   border-radius: 999px;
@@ -92,7 +92,7 @@
   place-items: center;
   color: #e1211b; /* se ve bien sobre el centro blanco */
   background: white; /* círculo blanco sólido */
-}
+} 
 
 /* Animación del anillo */
 @keyframes spin {
@@ -105,29 +105,36 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  /* Ajuste vertical para que quede sobre la parte baja, como la referencia */
-  bottom: clamp(8px, 4vh, 10px);
+  /* súbelo un poco: */
+  bottom: clamp(56px, 9vh, 120px);
   z-index: 3;
-  pointer-events: none; /* no bloquea clicks de nada debajo */
-  /* ancho máximo: similar a la franja de texto en ref */
+  pointer-events: none;
   width: min(1100px, 86vw);
 }
 
-/* El slide entra desde la derecha y se asienta */
+/* Fijamos un carril de altura constante y centrado verticalmente */
 .brandSlide {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* alto del carril: ajusta a tu gusto */
+  height: clamp(90px, 12vh, 160px);
   animation: slideInRight 5500ms cubic-bezier(.2,.9,.2,1) 1 both;
 }
 
-/* La imagen del slide */
+/* La imagen ocupa el carril sin empujarse hacia abajo */
 .brandSlide__img {
-  width: 100%;
-  margin-top: 10%;
+  max-width: 100%;
+  max-height: 100%;
   height: auto;
   display: block;
+  /* QUITAMOS el margin-top que te mandaba el segundo texto hacia abajo */
   filter: drop-shadow(0 14px 28px rgba(0,0,0,.35));
   user-select: none;
+  /* 🔹 Normalización extra */
+  object-fit: contain;  /* mantiene proporción */
+  /* aspect-ratio: 16/3;   fuerza misma caja para todos (ajusta según diseño) */
+
 }
 
 /* Entrada desde derecha y leve "pop" */
@@ -142,6 +149,9 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .brandSlide { animation: none; }
+}
 /* Respeto a usuarios con reducción de movimiento */
 @media (prefers-reduced-motion: reduce) {
   .brandSlide { animation: none; }

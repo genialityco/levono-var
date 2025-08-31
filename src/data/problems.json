@@ -12,7 +12,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Qué hacer cuando un usuario no puede iniciar sesión o pierde acceso.",
-    "popup": { "dx": 5, "dy": -39, "anchor": "left" }
+    "popup": { "dx": -50, "dy": -25, "anchor": "left" }
   },
 
   {
@@ -26,7 +26,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Solución de problemas relacionados con el acceso a sistemas o aplicaciones.",
-    "popup": { "dx": 8, "dy": 40, "anchor": "left" }
+    "popup": { "dx": 2, "dy": 18, "anchor": "left" }
   },
 
   {
@@ -54,7 +54,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Diagnóstico de problemas con teclados, monitores, impresoras, etc.",
-    "popup": { "dx": 6, "dy": -30, "anchor": "left" }
+    "popup": { "dx": 1, "dy": -18, "anchor": "left" }
   },
 
   {
@@ -68,7 +68,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Resolución de problemas al enviar/recibir correos o configurar clientes de correo.",
-    "popup": { "dx": 4, "dy": 60, "anchor": "left" }
+    "popup": { "dx": 1, "dy": 20, "anchor": "left" }
   },
 
   {
@@ -82,7 +82,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
-    "popup": { "dx": 6, "dy": -50, "anchor": "left" }
+    "popup": { "dx": -35, "dy":14, "anchor": "left" }
   },
 
   {
@@ -110,6 +110,6 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
-    "popup": { "dx": -10, "dy":70, "anchor": "left" }
+    "popup": { "dx": -1, "dy":22, "anchor": "left" }
   }
 ]

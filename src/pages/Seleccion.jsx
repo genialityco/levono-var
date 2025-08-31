@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import problems from "../data/problems.json";
@@ -23,11 +23,20 @@ export default function Seleccion() {
   const popupRef = useRef(null); // popup activo
   const pinRefs = useRef({}); // { [id]: HTMLButtonElement }
 
+  // Cerrar con tecla ESC (opcional, cómodo)
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") setActive(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   // Posición del popup (en %) relativa a la cancha
   const popupPos = useMemo(() => {
     if (!active) return null;
 
-    const dx = active.popup?.dx ?? 0; // desplazamiento horizontal en %
+    const dx = active.popup?.dx ?? 0;   // desplazamiento horizontal en %
     const dy = active.popup?.dy ?? -12; // desplazamiento vertical en %
     const x = clamp((active.x ?? 50) + dx, -10, 110);
     const y = clamp((active.y ?? 50) + dy, -10, 110);
@@ -35,7 +44,7 @@ export default function Seleccion() {
     return { x, y };
   }, [active]);
 
-  // Línea conectora (en px) entre pin y borde del popup
+  // Línea conectora (en px) entre pin y borde del popup (por si luego la usas)
   const connector = useMemo(() => {
     if (!active || !popupPos || !stageRef.current) return null;
 
@@ -61,7 +70,7 @@ export default function Seleccion() {
     return { x1, y1, x2, y2, viewW: stageRect.width, viewH: stageRect.height };
   }, [active, popupPos]);
 
-  // Nueva función para manejar Play
+  // Ir a reproducir
   const handlePlay = (p) => {
     if (!p) return;
     const next = `/problema/${p.slug}`; // ruta de detalle
@@ -99,7 +108,12 @@ export default function Seleccion() {
 
       {/* CONTENIDO */}
       <main className="screen2__content">
-        <div ref={stageRef} className="screen2__stage">
+        <div
+          ref={stageRef}
+          className="screen2__stage"
+          // Si quisieras cerrar al salir de toda la cancha, descomenta:
+          // onMouseLeave={() => setActive(null)}
+        >
           {/* Cancha */}
           <img
             src={IMAGES.canchaMenu}
@@ -113,12 +127,17 @@ export default function Seleccion() {
             {problems.map((p) => (
               <button
                 key={p.id}
-                ref={(el) => {
-                  if (el) pinRefs.current[p.id] = el;
-                }}
-                className="fieldPin"
+                ref={(el) => { if (el) pinRefs.current[p.id] = el; }}
+                className={`fieldPin${active?.id === p.id ? " is-active" : ""}`}
                 style={{ left: `${p.x}%`, top: `${p.y}%` }}
+
+                // ✅ Activa popup al pasar el mouse por el pin
+                onMouseEnter={() => setActive(p)}
+                // ✅ Accesibilidad (tab/teclado)
+                onFocus={() => setActive(p)}
+                // ✅ Compatibilidad táctil (tap)
                 onClick={() => setActive(p)}
+
                 aria-label={p.title}
                 data-pin-id={p.id}
               >
@@ -127,8 +146,8 @@ export default function Seleccion() {
             ))}
           </div>
 
-          {/* Línea conectora (pendiente dibujar más adelante) */}
-           {/*{connector && (
+          {/* Línea conectora (dejada comentada si aún no la usas) */}
+          {/* {connector && (
             <svg
               className="popupLine"
               width="100%"
@@ -145,13 +164,13 @@ export default function Seleccion() {
                 strokeLinecap="round"
               />
             </svg>
-
           )} */}
+
           {/* Popup */}
           {active && popupPos && (
             <div
               ref={popupRef}
-              className="problemPopup"
+              className="problemPopup problemPopup--show"
               style={{
                 left: `${popupPos.x}%`,
                 top: `${popupPos.y}%`,

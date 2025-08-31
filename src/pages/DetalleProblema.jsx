@@ -64,7 +64,7 @@ export default function DetalleProblema() {
           draggable={false}
         />
 
-        {/* Título en la franja roja */}
+        {/* Título en la franja roja 
         <div className="detail__title">
           <img
             className="detail__titleIcon"
@@ -73,7 +73,7 @@ export default function DetalleProblema() {
             draggable={false}
           />
           <span className="detail__titleText">{problem.title}</span>
-        </div>
+        </div>*/}
 
         {/* Video dentro del marco */}
         <video
