@@ -46,7 +46,7 @@
   position: relative;
   z-index: 1;
   width: var(--stage-w);
-  margin: clamp(50px, 0vh, 0px) auto 0;
+  margin: clamp(130px, 0vh, 0px) auto 0;
 }
 
 /* Marco */

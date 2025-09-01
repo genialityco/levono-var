@@ -96,11 +96,9 @@
 
 
 .home__texto{
-  width: min(900px, 90vw);
+  width: min(1100px, 70vw);
   display: block;
-  margin-top: -5% !important;
-  margin: clamp(6px, 1vh, 100px) auto 0; /* muy pegado al logo */
-}
+  }
 
 
 /* Tablet horizontal */

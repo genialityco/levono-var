@@ -106,10 +106,10 @@
   left: 50%;
   transform: translateX(-50%);
   /* súbelo un poco: */
-  bottom: clamp(56px, 9vh, 120px);
+  bottom: clamp(56px, 15vh, 150px);
   z-index: 3;
   pointer-events: none;
-  width: min(1100px, 86vw);
+  width: min(100%, 86vw);
 }
 
 /* Fijamos un carril de altura constante y centrado verticalmente */
@@ -133,7 +133,7 @@
   user-select: none;
   /* 🔹 Normalización extra */
   object-fit: contain;  /* mantiene proporción */
-  /* aspect-ratio: 16/3;   fuerza misma caja para todos (ajusta según diseño) */
+  /*aspect-ratio: 18/3;   fuerza misma caja para todos (ajusta según diseño) */
 
 }
 

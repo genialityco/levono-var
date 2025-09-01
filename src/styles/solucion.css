@@ -47,7 +47,7 @@
   position: relative;
   z-index: 1;
   width: var(--stage-w);
-  margin: clamp(48px, 4vh, 80px) auto 0;
+  margin: clamp(110px, 4vh, 80px) auto 0;
 }
 
 /* marco PNG */

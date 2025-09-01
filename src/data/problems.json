@@ -40,7 +40,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Ayuda a los usuarios para instalar o configurar software aprobado.",
-    "popup": { "dx": 6, "dy": -65, "anchor": "left" }
+    "popup": { "dx": -37.5, "dy": 6, "anchor": "left" }
   },
 
   {
@@ -54,7 +54,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Diagnóstico de problemas con teclados, monitores, impresoras, etc.",
-    "popup": { "dx": 1, "dy": -18, "anchor": "left" }
+    "popup": { "dx": 1, "dy": -22, "anchor": "left" }
   },
 
   {
@@ -82,7 +82,7 @@
     "videoUrl": "/videos/Video_nvidia.mp4",
     "solucionVideo": "/videos/Video_nvidia.mp4",
     "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
-    "popup": { "dx": -35, "dy":14, "anchor": "left" }
+    "popup": { "dx": -37.5, "dy":14, "anchor": "left" }
   },
 
   {
