@@ -42,7 +42,7 @@ import lenovoServiceDesk from '../assets/images/LENOVO SDESK SERVICES.svg'
 import fondoGracias from '../assets/images/backgrounds/FONDOS-05.png';
 import problemaSolucionado from '../assets/images/MARCO_RESULTADOS.png';
 import marcoRevisar from '../assets/images/MARCO_CIERRE.png';
-import backgroundaudio from '../assets/Audios/AUDIO_LENOVO.mp3';
+import backgroundaudio from '../assets/Audios/audio_background_lenovo.mp3';
 import texto_marca_1 from '../assets/images/TEXTOS_03-02.svg';
 import texto_marca_2 from '../assets/images/TEXTOS_03-01.svg';
 

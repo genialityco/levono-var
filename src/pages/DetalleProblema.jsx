@@ -1,4 +1,4 @@
-import { useMemo, useRef, useEffect } from "react";
+import { useMemo, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import problems from "../data/problems.json";
@@ -10,7 +10,7 @@ import "../styles/detalleproblema.css";
 export default function DetalleProblema() {
   const { id: slug } = useParams();
   const navigate = useNavigate();
-  const videoRef = useRef(null);
+  //const videoRef = useRef(null); para el import useRef,
 
   // Buscar el problema por slug
   const problem = useMemo(
