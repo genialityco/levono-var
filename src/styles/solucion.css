@@ -61,19 +61,30 @@
   z-index: 1;
 }
 
-/* video encajado dentro del rectángulo del marco */
-.solutionVideo{
-  position: absolute;
+/* Asegura que YouTube (iframe) se ajuste como un <video> */
+.solutionVideo {
+ position: absolute;
   left: 50%;
   top: var(--video-top);
   transform: translate(-50%, -50%);
+
   width: var(--video-w);
-  max-height: 600px;          /* sube/baja si hace falta */
-  object-fit: contain;        /* mantiene proporción */
+  aspect-ratio: 16 / 9;         /* Mantén 16:9 dentro del marco */
+  max-height: 600px;            /* igual que el video */
+  border-radius: 10px;
   box-shadow: 0 10px 26px rgba(0,0,0,.35);
   background: #000;
-  z-index: 2;
+  overflow: hidden;             /* para las esquinas redondeadas */
+  z-index: 2;                   /* por encima del marco */
 }
+
+.solutionVideo iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 
 /* Panel blanco (sin marco gráfico) 
 .solution__videoWrap {

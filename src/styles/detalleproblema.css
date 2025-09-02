@@ -59,6 +59,31 @@
   user-select: none;
 }
 
+/* Wrapper para iframes (YouTube) que encaja en el marco igual que .detail__video */
+.detail__video  {
+  position: absolute;
+  left: 50%;
+  top: var(--video-top);
+  transform: translate(-50%, -50%);
+
+  width: var(--video-w);
+  aspect-ratio: 16 / 9;         /* Mantén 16:9 dentro del marco */
+  max-height: 600px;            /* igual que el video */
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  background: #000;
+  overflow: hidden;             /* para las esquinas redondeadas */
+  z-index: 2;                   /* por encima del marco */
+}
+
+.detail__video  iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+
 /* ===== knobs del banner rojo ===== */
 .detail{
   /* ancho visible del rectángulo rojo respecto al marco */

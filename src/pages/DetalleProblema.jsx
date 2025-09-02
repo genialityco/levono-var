@@ -2,8 +2,8 @@ import { useMemo, useRef, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import problems from "../data/problems.json";
-import { IMAGES, ICONS, VIDEOS } from "../constants/assets";
-import FooterSponsors from "../components/FooterSponsors";
+import { IMAGES, VIDEOS } from "../constants/assets";
+import MediaPlayer from "../components/MediaPlayer"; // ⬅️ usamos el componente ya creado
 
 import "../styles/detalleproblema.css";
 
@@ -35,7 +35,6 @@ export default function DetalleProblema() {
 
   return (
     <section className="detail">
-
       <video
         className="home__bgVideo"
         src={VIDEOS.bg3video}
@@ -44,8 +43,9 @@ export default function DetalleProblema() {
         muted
         playsInline
         preload="auto"
-         poster={IMAGES.bg2}
+        poster={IMAGES.bg2}
       />
+
       {/* Fondo */}
       <div className="detail__bg" />
       <div className="detail__overlay" />
@@ -64,32 +64,17 @@ export default function DetalleProblema() {
           draggable={false}
         />
 
-        {/* Título en la franja roja 
-        <div className="detail__title">
-          <img
-            className="detail__titleIcon"
-            src={ICONS[problem.iconKey]}
-            alt=""
-            draggable={false}
-          />
-          <span className="detail__titleText">{problem.title}</span>
-        </div>*/}
-
-        {/* Video dentro del marco */}
-        <video
-          ref={videoRef}
-          className="detail__video"
-          data-foreground-video 
-          src={problem.videoUrl}
-          controls
-          autoPlay
+        {/* Video dentro del marco (ahora con MediaPlayer) */}
+        <MediaPlayer
+          url={problem.videoUrl}
+          title={problem.title}
           onEnded={handleEnded}
+          className="detail__video"      // ⬅️ mantiene el mismo CSS
+          autoPlay                        // ⬅️ respeta tu comportamiento
+          controls                        // ⬅️ respeta tu comportamiento
+          playsInline                     // ⬅️ respeta tu comportamiento
         />
-
       </main>
-
-      {/* Sponsors 
-      <FooterSponsors />*/}
     </section>
   );
 }

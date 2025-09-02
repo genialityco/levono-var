@@ -1,18 +1,15 @@
-import { useMemo, useRef, useEffect } from "react";
+import { useMemo, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import problems from "../data/problems.json";
 import { IMAGES, VIDEOS } from "../constants/assets";
-import FooterSponsors from "../components/FooterSponsors";
-import HeaderLogo from "../components/HeaderLogo";
+import MediaPlayer from "../components/MediaPlayer"; // ⬅️ igual que en DetalleProblema
 
 import "../styles/solucion.css";
 
 export default function Solucion() {
-  // mantenemos el mismo patrón que ya te funciona en DetalleProblema
   const { id: slug } = useParams();
   const navigate = useNavigate();
-  const videoRef = useRef(null);
 
   // Buscar el problema por slug (igual que en DetalleProblema)
   const problem = useMemo(() => problems.find((p) => p.slug === slug), [slug]);
@@ -24,11 +21,8 @@ export default function Solucion() {
 
   if (!problem) return null;
 
-  //const handleBack = () => navigate("/seleccion");
-
   const handleEnded = () => {
-    // ¿A dónde vas al terminar? Si tienes una pantalla intermedia, cámbialo aquí.
-    // Por ejemplo: navigate("/gracias");
+    // Al terminar el video vamos a /gracias (ajusta si lo necesitas)
     navigate("/gracias");
   };
 
@@ -45,37 +39,29 @@ export default function Solucion() {
         poster={IMAGES.bg2}
       />
 
-      {/*<HeaderLogo />*/}
       <div className="solution__bg" />
       <div className="solution__overlay" />
 
       <main className="solutionStage">
-        {/* Marco PNG para Solución (puede ser el mismo o uno específico) */}
+        {/* Marco PNG de solución */}
         <img
           className="solutionFrame"
-          src={IMAGES.marcoVideo02 /* o el marco que quieras en Solución */}
+          src={IMAGES.marcoVideo02} // usa el marco que definiste para Solución
           alt=""
           draggable={false}
         />
 
-        {/* (Opcional) etiqueta/título encima de la franja del marco
-        <div className="solutionRibbon">
-          <span className="solutionRibbon__text">Lenovo Service Desk</span>
-        </div> */}
-
-        {/* Video “encajado” dentro del rectángulo del marco */}
-        <video
-          ref={videoRef}
-          className="solutionVideo"
-          src={problem.solucionVideo}
-          controls
-          autoPlay
+        {/* Video dentro del marco (usa MediaPlayer igual que en DetalleProblema) */}
+        <MediaPlayer
+          url={problem.solucionVideo}
+          title={problem.title}
           onEnded={handleEnded}
-          data-foreground-video
+          className="solutionVideo"  // respeta tu CSS / layout del marco
+          autoPlay
+          controls
+          playsInline
         />
       </main>
-
-      {/*} <FooterSponsors />*/}
     </section>
   );
 }
