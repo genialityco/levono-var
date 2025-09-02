@@ -60,6 +60,7 @@ export default function BackgroundAudio() {
 
     // Rutas donde hay video protagonista
     const routeHasForegroundVideo =
+      pathname.startsWith('/problema')
       pathname.startsWith('/solucion') ||
       pathname.startsWith('/encuesta');
 

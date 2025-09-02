@@ -60,6 +60,7 @@ export default function Solucion() {
           autoPlay
           controls
           playsInline
+          data-foreground-video
         />
       </main>
     </section>

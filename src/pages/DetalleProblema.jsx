@@ -73,6 +73,7 @@ export default function DetalleProblema() {
           autoPlay                        // ⬅️ respeta tu comportamiento
           controls                        // ⬅️ respeta tu comportamiento
           playsInline                     // ⬅️ respeta tu comportamiento
+          data-foreground-video
         />
       </main>
     </section>
