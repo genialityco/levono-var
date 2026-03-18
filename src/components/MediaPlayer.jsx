@@ -76,7 +76,7 @@ export default function MediaPlayer({
             }),
             "*"
           );
-        } catch {}
+        } catch {/* */}
       }
     };
 
@@ -100,7 +100,7 @@ export default function MediaPlayer({
           }),
           "*"
         );
-      } catch {}
+      } catch {/* */}
     };
 
     const i1 = setInterval(ping, 500);
