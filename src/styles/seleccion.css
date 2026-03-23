@@ -221,6 +221,9 @@
 
   .problemPopup{
     --popup-w: min(270px, 46vw);   /* antes tenías 20% */
+    cursor: pointer;
+    z-index: 9999999; /* sobre todo */
+
   }
   .problemPopup__play{
     --play-right: clamp(14px, 2.5vw, 3px);   /* distancia al borde derecho del PNG */
