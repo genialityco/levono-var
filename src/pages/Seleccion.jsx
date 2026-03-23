@@ -17,6 +17,7 @@ export default function Seleccion() {
 
   // Estado del problema activo (objeto del JSON) o null
   const [active, setActive] = useState(null);
+  const [isClicked, setIsClicked] = useState(false);
 
   // Refs reales
   const stageRef = useRef(null); // contenedor de la cancha
@@ -73,11 +74,18 @@ export default function Seleccion() {
   // Ir a reproducir
   const handlePlay = (p) => {
     if (!p) return;
-    const next = `/problema/${p.slug}`; // ruta de detalle
-    sessionStorage.setItem("nextRoute", next); // respaldo
-    navigate(`/analizando?next=${encodeURIComponent(next)}`, {
-      state: { next, problem: p },
-    });
+    // Trigger animation feedback
+    setIsClicked(true);
+    setTimeout(() => setIsClicked(false), 300);
+    
+    // Navigate after brief delay to show animation
+    setTimeout(() => {
+      const next = `/problema/${p.slug}`; // ruta de detalle
+      sessionStorage.setItem("nextRoute", next); // respaldo
+      navigate(`/analizando?next=${encodeURIComponent(next)}`, {
+        state: { next, problem: p },
+      });
+    }, 150);
   };
 
   return (
@@ -169,8 +177,9 @@ export default function Seleccion() {
           {/* Popup */}
           {active && popupPos && (
             <div
+              onClick={() => handlePlay(active)}
               ref={popupRef}
-              className="problemPopup problemPopup--show"
+              className={`problemPopup problemPopup--show ${isClicked ? 'problemPopup--clicked' : ''}`}
               style={{
                 left: `${popupPos.x}%`,
                 top: `${popupPos.y}%`,

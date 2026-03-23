@@ -103,7 +103,7 @@
 .problemPopup{
   position: absolute;
   transform: translate(0, -50%);  /* ancla en borde izquierdo, centro vertical */
-  z-index: 4;                     /* sobre todo */
+  z-index: 9999999;                     /* sobre todo */
 }
 
 /* --- TAMAÑO DEL POPUP --- 
@@ -155,6 +155,23 @@
   cursor: pointer;
 }
 
+/* Click feedback animation for popup */
+@keyframes popupClickFlash {
+  0% {
+    filter: brightness(1) drop-shadow(0 10px 28px rgba(0,0,0,.35));
+  }
+  50% {
+    filter: brightness(1.8) drop-shadow(0 10px 28px rgba(255,255,255,.6));
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 10px 28px rgba(0,0,0,.35));
+  }
+}
+
+.problemPopup--clicked {
+  animation: popupClickFlash 0.3s ease-in-out;
+}
+
 /* Línea: fina y por debajo del popup/pines */
 .popupLine{
   position: absolute;
@@ -174,6 +191,8 @@
 
   .problemPopup{
     --popup-w: min(270px, 46vw);   /* antes tenías 20% */
+    cursor: pointer;
+    z-index: 9999999; /* sobre todo */
   }
   .problemPopup__play{
     --play-right: clamp(14px, 2.5vw, 3px);   /* distancia al borde derecho del PNG */
