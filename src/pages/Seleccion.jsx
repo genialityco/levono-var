@@ -73,6 +73,7 @@ export default function Seleccion() {
 
   // Ir a reproducir
   const handlePlay = (p) => {
+
     if (!p) return;
     // Trigger animation feedback
     setIsClicked(true);
@@ -205,7 +206,7 @@ export default function Seleccion() {
               {/* Cerrar */}
               <button
                 className="problemPopup__close"
-                onClick={() => setActive(null)}
+                onClick={(e) => {e.stopPropagation();setActive(null)}}
                 aria-label="Cerrar"
                 title="Cerrar"
               >
