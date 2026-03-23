@@ -10,7 +10,7 @@
     "iconKey": "B01",
     "popupKey": "P01",
     "videoUrl": "https://youtu.be/Nz9c7i-XOA0",
-    "solucionVideo": "https://youtu.be/JqoFq8So0ZU",
+    "solucionVideo": "https://youtu.be/T_IkhoLPdfc",
     "description": "Qué hacer cuando un usuario no puede iniciar sesión o pierde acceso.",
     "popup": { "dx": -50, "dy": -25, "anchor": "left" }
   },
@@ -24,7 +24,7 @@
     "iconKey": "B02",
     "popupKey": "P02",
     "videoUrl": "https://youtu.be/_ifEWNfKWzM",
-    "solucionVideo": "https://youtu.be/JqoFq8So0ZU",
+    "solucionVideo": "https://youtu.be/T_IkhoLPdfc",
     "description": "Solución de problemas relacionados con el acceso a sistemas o aplicaciones.",
     "popup": { "dx": 2, "dy": 18, "anchor": "left" }
   },
@@ -38,7 +38,7 @@
     "iconKey": "B03",
     "popupKey": "P03",
     "videoUrl": "https://youtu.be/C66rcq8VNM4",
-    "solucionVideo": "https://youtu.be/JqoFq8So0ZU",
+    "solucionVideo": "https://youtu.be/T_IkhoLPdfc",
     "description": "Ayuda a los usuarios para instalar o configurar software aprobado.",
     "popup": { "dx": -37.5, "dy": 6, "anchor": "left" }
   },
@@ -52,7 +52,7 @@
     "iconKey": "B04",
     "popupKey": "P04",
     "videoUrl": "https://youtu.be/--7Fcp8cYNY",
-    "solucionVideo": "https://youtu.be/JqoFq8So0ZU",
+    "solucionVideo": "https://youtu.be/T_IkhoLPdfc",
     "description": "Diagnóstico de problemas con teclados, monitores, impresoras, etc.",
     "popup": { "dx": 1, "dy": -22, "anchor": "left" }
   },
@@ -66,7 +66,7 @@
     "iconKey": "B05",
     "popupKey": "P05",
     "videoUrl": "https://youtu.be/L4Gq-NwLq4c",
-    "solucionVideo": "https://youtu.be/JqoFq8So0ZU",
+    "solucionVideo": "https://youtu.be/T_IkhoLPdfc",
     "description": "Resolución de problemas al enviar/recibir correos o configurar clientes de correo.",
     "popup": { "dx": 1, "dy": 20, "anchor": "left" }
   },
@@ -80,7 +80,7 @@
     "iconKey": "B06",
     "popupKey": "P06",
     "videoUrl": "https://youtu.be/ueWyIbp03vo",
-    "solucionVideo": "https://youtu.be/JqoFq8So0ZU",
+    "solucionVideo": "https://youtu.be/T_IkhoLPdfc",
     "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
     "popup": { "dx": -37.5, "dy":14, "anchor": "left" }
   },
@@ -94,7 +94,7 @@
     "iconKey": "B07",
     "popupKey": "P07",
     "videoUrl": "https://youtu.be/DJd_fCwVX40",
-    "solucionVideo": "https://youtu.be/JqoFq8So0ZU",
+    "solucionVideo": "https://youtu.be/T_IkhoLPdfc",
     "description": "Atención a computadoras lentas o aplicaciones con retraso.",
     "popup": { "dx": -6, "dy": -50, "anchor": "left" }
   },
@@ -108,7 +108,7 @@
     "iconKey": "B08",
     "popupKey": "P08",
     "videoUrl": "https://youtu.be/7cneepgPy6o",
-    "solucionVideo": "https://youtu.be/JqoFq8So0ZU",
+    "solucionVideo": "https://youtu.be/T_IkhoLPdfc",
     "description": "Asistencia con problemas de conexión a Wi-Fi o VPN.",
     "popup": { "dx": -1, "dy":22, "anchor": "left" }
   }
